@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            width: 800px;
+            margin: 100px auto;
+            vertical-align: middle;
+        }
+
+        p {
+            display: none;
+            color: #ccc;
+        }
+
+        i {
+            display: none;
+            width: 20px;
+            height: 20px;
+            background-color: #1296db;
+            vertical-align: middle;
+        }
+
+        input {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>设置密码：</span><input type="password">
+        <i></i>
+        <p>6-16位字符（字母、数字、符号），区分大小写</p>
+    </div>
+
+    <script>
+        var ipt = document.querySelector('input');
+        var $p = document.querySelector('p');
+        var $i = document.querySelector('i');
+        ipt.onfocus = function () {
+            $p.style.display = 'inline-block';
+            $i.style.display = 'inline-block';
+        }
+        ipt.onblur = function () {
+            if (this.value.length < 6) {
+                $p.innerHTML = '密码较短，最短支持6个字符';
+                $p.style.color = 'red';
+                $i.style.background = 'url(images/error_icon.png) no-repeat';
+            } else if (this.value.length > 16) {
+                $p.innerHTML = '密码太长，最多支持16个字符';
+                $p.style.color = 'red';
+                $i.style.background = 'url(images/error_icon.png) no-repeat';
+            } else {
+                $p.innerHTML = '';
+                $p.style.color = 'green';
+                $i.style.background = 'url(images/success_icon.png) no-repeat';
+            }
+        }
+    </script>
+</body>
+
+</html>

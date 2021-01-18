@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单标签</title>
+</head>
+<body>
+    <form action="demo.php" method="GET" name="first">
+        <!-- text 文本框输入内容可见 -->
+        用户名：<input type="text" name="username" value="请输入你的用户名" maxlength="5"><br>
+        <!-- password 密码按钮，输入内容不可见 -->
+        密&nbsp;&nbsp;&nbsp;码：<input type="password" name="userpassword" maxlength="16"> <br>
+        <!-- radio 单选按钮可以实现单选一 -->
+        性&nbsp;&nbsp;&nbsp;别：<input type="radio" name="sex" value="男" checked="checked" id="man"><label for="man">男</label>&nbsp;&nbsp;&nbsp;<input type="radio" name="sex" value="女" id="woman"><label for="woman">女</label> <br>
+        年龄：
+        <select name="old" id="">
+            <option >18</option>
+            <option >19</option>
+            <option >20</option>
+            <option >21</option>
+            <option >22</option>
+            <option selected="selected">23</option>
+            <option >24</option>
+            <option >25</option>
+            <option >26</option>
+            <option >27</option>
+            <option >28</option>
+            <option >29</option>
+            <option >30</option>
+        </select> <br>
+        <!-- checkbox 复选框可以实现多个选择 -->
+        爱&nbsp;&nbsp;&nbsp;好：<input type="checkbox" name="habit" value="篮球" id="lq"><label for="lq">篮球</label>&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" name="habit" value="网球" id="wq"><label for="wq">网球</label>&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" name="habit" value="羽毛球" id="ymq"><label for="ymq">羽毛球</label>&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" name="habit" value="干饭" id="gf"><label for="gf">干饭</label>&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" name="habit" value="打游戏" id="dyx"><label for="dyx">打游戏</label> <br>
+        <!-- button 点击按钮，不提交数据，后期结合JS搭配使用 -->
+        请输入手机验证码：<input type="text" maxlength="6"><input type="button" value="获取短信验证码"> <br>
+        <!-- file 文件域 上传文件时使用 -->
+        上传头像：<input type="file"> <br>
+        自我介绍：<textarea name="zwjs" cols="50" rows="5">请进行自我介绍</textarea>
+        <!-- submit 提交按钮，将form表单里的内容提交到后台服务器 -->
+        <input type="submit" value="免费注册"> <br>
+        <!-- reset 重置按钮可以还原表单元素初始的默认状态 -->
+        <input type="reset" value="重新输入"> <br>
+
+    </form>
+</body>
+</html>

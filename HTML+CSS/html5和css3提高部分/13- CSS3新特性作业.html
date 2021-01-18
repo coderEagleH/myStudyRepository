@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css3新特性</title>
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?b5mc1k');
+            src: url('fonts/icomoon.eot?b5mc1k#iefix') format('embedded-opentype'),
+                url('fonts/icomoon.ttf?b5mc1k') format('truetype'),
+                url('fonts/icomoon.woff?b5mc1k') format('woff'),
+                url('fonts/icomoon.svg?b5mc1k#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+
+        .box {
+            position: relative;
+            width: 222px;
+            height: 360px;
+            border: 1px solid #000;
+            margin: 100px auto;
+        }
+
+        .box h4 {
+            margin: 5px 5px;
+            font-size: 14px;
+            font-weight: 400;
+            color: #666666;
+        }
+
+        .box .price {
+            margin-left: 5px;
+            font-size: 20px;
+            color: red;
+        }
+
+        .box .prev {
+            font-size: 14px;
+            color: grey;
+            text-decoration: line-through;
+        }
+
+        .box .shengyu {
+            width: 100%;
+            height: 11px;
+            margin: 0 5px;
+            font-size: 12px;
+            color: grey;
+        }
+
+        .box .shengyu span {
+            color: red;
+        }
+
+        .box .shengyu .bar {
+            display: inline-block;
+            height: 100%;
+            width: 95px;
+            border: 1px solid red;
+            border-radius: 5px;
+        }
+
+        .box .shengyu .bar .bar1 {
+            height: 100%;
+            width: 87%;
+            background-color: red;
+        }
+
+        .box .buy {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: #f03726;
+        }
+
+        .box .buy h3 {
+            color: #fff;
+            font-weight: 400;
+        }
+
+        .logo {
+            position: relative;
+            height: 50px;
+            width: 50px;
+            margin: 100px auto;
+            background-color: #fff;
+            border: 1px solid red;
+            overflow: hidden;
+        }
+
+        .logo .font {
+            position: absolute;
+            width: 100px;
+            right: 4px;
+            font-family: 'icomoon';
+            font-size: 40px;
+            line-height: 49px;
+            color: red;
+
+            transition: width 0.2s;
+        }
+
+        .logo:hover .font {
+            width: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="images/iphone.jpg" alt="">
+        <h4>Apple苹果iPhone12 256G 移动联通电信5G手机</h4>
+        <span class="price">&yen;6999</span>
+        <span class="prev">&yen;8999</span>
+        <div class="shengyu">
+            已售<span>87%</span>
+            <div class="bar">
+                <div class="bar1"></div>
+            </div>
+            剩余<span>29</span>件
+        </div>
+        <div class="buy">
+            <h3>立即抢购</h3>
+        </div>
+    </div>
+
+    <div class="logo">
+        <div class="font">&nbsp;</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: none;
+            position: relative;
+            background-color: #fff;
+            width: 500px;
+            height: 50px;
+            margin-left: 100px;
+            margin-top: 20px;
+            text-indent: 1em;
+            line-height: 50px;
+            font-size: 25px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, .3);
+        }
+
+        div i {
+            position: absolute;
+            left: 10px;
+            top: -40px;
+            border: 20px solid #ccc;
+            border-color: transparent transparent #fff transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <span>快递单号查询：</span>
+    <input type="number" name="" id="" placeholder="请输入您要查询的单号">
+    <div><i></i></div>
+
+    <script>
+        var body = document.body;
+        body.children[1].addEventListener('keyup', fn);
+        body.children[1].addEventListener('blur', function () {
+            body.children[2].style.display = 'none';
+        });
+        body.children[1].addEventListener('focus', function () {
+            if (body.children[1].value != '') {
+                body.children[2].style.display = 'block';
+            }
+        });
+        function fn(e) {
+            if (body.children[1].value != '') {
+                body.children[2].style.display = 'block';
+                body.children[2].innerHTML = body.children[1].value + '<i></i>';
+            } else {
+                body.children[2].style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

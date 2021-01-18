@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute绝对定位</title>
+    <style>
+        .box1 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .box2 {
+            /* position: relative; */
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+
+        .box3 {
+            /* position: absolute;
+            right: 0;
+            bottom: 0; */
+            width: 50px;
+            height: 50px;
+            background-color: green;
+        }
+
+        .box4 {
+            height: 300px;
+            width: 300px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2">
+            <div class="box3"></div>
+        </div>
+    </div>
+    <div class="box4"></div>
+
+</body>
+
+</html>

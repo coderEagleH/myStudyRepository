@@ -1,0 +1,102 @@
+/* nav导航栏部分 */
+.sk {
+    position: absolute;
+    left: 440px;
+    top: 73px;
+    padding: 3px 0 3px 10px;
+    border-left: 1px solid #c81523;
+}
+.sk_list {
+    float: left;
+}
+.sk_list ul li {
+    float: left;
+    padding: 0 28px;
+}
+.sk_list ul li a {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+.sk_con {
+    float: right;
+    margin-right: 65px;
+}
+.sk_con ul li {
+    float: left;
+    padding: 0 22px;
+}
+.sk_con ul li a {
+    font-size: 14px;
+}
+.sk_con ul li:last-child a::after {
+    font-family: "icomoon";
+    content: "\e914";
+}
+.sk_hd {
+    margin-bottom: 25px;
+}
+.sk_bd ul li {
+    float: left;
+    width: 290px;
+    height: 460px;
+    margin-left: 13px;
+    border: 1px solid transparent;
+}
+.sk_bd ul li:nth-of-type(4n + 1) {
+    margin-left: 0;
+}
+.sk_bd ul li a h6 {
+    padding: 10px 0 10px 10px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "\5B8B\4F53";
+    color: #666;
+}
+.sk_bd ul li a img {
+    width: 100%;
+    text-align: center;
+}
+.sk_bd ul li a span {
+    padding-left: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #e60012;
+}
+.sk_bd ul li a del {
+    font-size: 14px;
+    font-weight: 700;
+    color: #a4a4a4;
+}
+.sk_bd ul li a div {
+    font-size: 14px;
+    color: #666666;
+}
+.sk_bd ul li a div > i {
+    display: inline-block;
+    width: 132px;
+    height: 12px;
+    background-color: #fff;
+    border: 1px solid #ed282e;
+    border-radius: 6px;
+}
+.sk_bd ul li a div > i > i {
+    float: left;
+    width: 118px;
+    height: 100%;
+    background-color: #ed282e;
+}
+.sk_bd ul li > div {
+    width: 288px;
+    height: 49px;
+    background-color: #b1191a;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+}
+.sk_bd ul li > div a {
+    color: #fff;
+}
+.sk_bd ul li:hover {
+    border: 1px solid #e12228;
+}

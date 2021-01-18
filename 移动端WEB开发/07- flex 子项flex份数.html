@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: flex;
+            width: 60%;
+            height: 150px;
+            background-color: #1296db;
+            margin: 0 auto;
+            /* justify-content: space-between; */
+            /* align-items: center; */
+        }
+
+        section div:nth-child(1) {
+            width: 100px;
+            height: 150px;
+            background-color: red;
+        }
+
+        section div:nth-child(2) {
+            flex: 1;
+            background-color: yellowgreen;
+        }
+
+        section div:nth-child(3) {
+            width: 100px;
+            height: 150px;
+            background-color: blue;
+        }
+
+        p {
+            display: flex;
+            width: 60%;
+            height: 200px;
+            background-color: #ccc;
+            margin: 0 auto;
+        }
+
+        p span {
+            flex: 1;
+        }
+
+        p span:nth-child(1) {
+            background-color: yellow;
+        }
+
+        p span:nth-child(2) {
+            background-color: black;
+        }
+
+        p span:nth-child(3) {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+<p>
+    <span></span>
+    <span></span>
+    <span></span>
+</p>
+
+</html>

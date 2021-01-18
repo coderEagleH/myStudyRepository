@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+        }
+
+        .two {
+            /* margin的简写方式与padding一模一样，顺时针 */
+            margin: 10px 20px 30px 40px;
+        }
+
+        .one {
+            margin-top: 20px;
+        }
+
+        .nav {
+            width: 1000px;
+            height: 300px;
+
+            /* 让盒子自动水平居中 将盒子的左右外边距设置为auto */
+            margin: 0 auto;
+
+            /* 若要行内元素或者行内块元素也进行水平居中对齐，则给他的父元素添加 text-align:center; 即可 */
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">我是第一个</div>
+    <div class="two">我是第二个</div>
+    <div class="nav">我是一个块级盒子，我想居中对齐<br>
+        <span>我是块元素里的行内元素，我也想居中对齐</span>
+    </div>
+</body>
+
+</html>

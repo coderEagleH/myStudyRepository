@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="">
+    <button>发送</button>
+
+    <script>
+        var body = document.body;
+        body.children[1].addEventListener('click', function () {
+            body.children[1].disabled = true;
+            var count = 10;
+            body.children[1].innerHTML = '还剩' + count + '秒后再次发送';
+            var ctm = setInterval(function () {
+                count--;
+                body.children[1].innerHTML = '还剩' + count + '秒后再次发送';
+                if (count == 0) {
+                    clearInterval(ctm);
+                    body.children[1].innerHTML = '发送';
+                    body.children[1].disabled = false;
+                }
+            }, 1000)
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 我们想页面一打开，一个盒子就从左边走到右边 */
+        @keyframes move {
+            0% {
+                transform: translateX(0px) rotate(0);
+            }
+
+            25% {
+                transform: translate(1000px, 0px) rotate(360deg);
+            }
+
+            50% {
+                transform: translate(1000px, 800px) rotate(720deg);
+            }
+
+            75% {
+                transform: translate(0px, 800px) rotate(1080deg);
+            }
+
+            100% {
+                transform: translateX(0px) rotate(1440deg);
+            }
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: #1296db;
+            animation-name: move;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

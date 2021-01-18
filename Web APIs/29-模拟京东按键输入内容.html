@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?cjoxil');
+            src: url('fonts/icomoon.eot?cjoxil#iefix') format('embedded-opentype'),
+                url('fonts/icomoon.ttf?cjoxil') format('truetype'),
+                url('fonts/icomoon.woff?cjoxil') format('woff'),
+                url('fonts/icomoon.svg?cjoxil#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .search_box {
+            height: 30px;
+            width: 350px;
+            margin: 100px auto;
+        }
+
+        input {
+            border: 1px solid red;
+            outline: none;
+            height: 30px;
+            width: 300px;
+            text-indent: 1em;
+        }
+
+        .search_box div {
+            float: right;
+            height: 30px;
+            width: 50px;
+            background-color: red;
+            text-align: center;
+            line-height: 30px;
+            font-family: 'icomoon';
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="search_box">
+        <input type="text" placeholder="请输入搜索内容">
+        <div></div>
+    </div>
+
+    <script>
+        var ipt = document.querySelector('input');
+        // console.log(ipt);
+        document.addEventListener('keyup', fn);
+        function fn(e) {
+            // console.log(e.keyCode);
+            if (e.keyCode == 83) { //检测是否按下S键
+                ipt.focus();
+            }
+        }
+
+    </script>
+</body>
+
+</html>

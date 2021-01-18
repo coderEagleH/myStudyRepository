@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            width: 1200px;
+            margin: 100px auto;
+        }
+
+        .tab-main {
+            width: 990px;
+            height: 38px;
+            border: 1px solid #eee;
+            border-bottom: 1px solid #e4393c;
+            background-color: #f7f7f7;
+        }
+
+        .tab-main li {
+            float: left;
+            height: 36px;
+            padding: 10px 25px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .tab-main li:hover {
+            cursor: pointer;
+        }
+
+        .current {
+            background-color: #e4393c;
+            color: #fff !important;
+        }
+
+        #content div {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="tab-main">
+        <li class="current">商品介绍</li>
+        <li>规格与包装</li>
+        <li>售后保障</li>
+        <li>商品评价（150万+）</li>
+        <li>本店好评商品</li>
+    </ul>
+    <div id="content">
+        <div>商品介绍模块内容</div>
+        <div>规格与包装模块内容</div>
+        <div>售后保障模块内容</div>
+        <div>商品评价模块内容</div>
+        <div>本店好评商品模块内容</div>
+    </div>
+
+
+    <script>
+        $(function () {
+            $("#content div:first").show();
+            $(".tab-main li").click(function () {
+                var index = $(this).index();
+                $(this).addClass("current").siblings("li").removeClass("current");
+                $("#content div").eq(index).show().siblings("div").hide();
+
+
+            })
+            $(".tab-main li").mouseover(function () {
+                $(this).css("color", "#e4393c").siblings("li").css("color", "#666");
+            })
+
+
+
+
+
+        })
+    </script>
+
+</body>
+
+</html>

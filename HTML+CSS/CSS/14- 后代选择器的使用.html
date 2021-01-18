@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器之后代选择的基本使用</title>
+    <style>
+        /* 想要把ol里的li选出来改为红色（red） */
+        ol li {
+            color: red;
+        }
+
+        ol a {
+            color: pink;
+            text-decoration: none;
+        }
+
+        .nav a {
+            color: blue;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>我是ol 的子元素</li>
+        <li>我是ol 的子元素</li>
+        <li>我是ol 的子元素</li>
+        <li><a href="#">我是li 的子元素</a></li>
+    </ol>
+    <ul>
+        <li>我是ul 的子元素</li>
+        <li>我是ul 的子元素</li>
+        <li>我是ul 的子元素</li>
+    </ul>
+    <ul class="nav">
+        <li>我是ul 的子元素</li>
+        <li>我是ul 的子元素</li>
+        <li>我是ul 的子元素</li>
+        <li><a href="#">我是li 的子元素</a></li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS三角制作</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: #666666;
+        }
+
+        /* .box1 {
+            width: 0;
+            height: 0;
+            border-top: 10px solid pink;
+            border-right: 10px solid black;
+            border-bottom: 10px solid blue;
+            border-left: 10px solid yellowgreen;
+        }
+
+        .box2 {
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-bottom-color: red;
+        } */
+
+        /* 要求制作一个大盒子带个小三角的样式 */
+
+        .box1 {
+            position: relative;
+            height: 300px;
+            width: 300px;
+            background-color: #fff;
+            margin: 100px auto;
+        }
+
+        .box2 {
+            position: absolute;
+            top: 20px;
+            right: -20px;
+            height: 0;
+            width: 0;
+            line-height: 0;
+            font-size: 0;
+            border: 10px solid transparent;
+            border-left-color: #fff;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+
+</html>

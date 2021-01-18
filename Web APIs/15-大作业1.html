@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户名和密码显示隐藏内容</title>
+    <style>
+        .usr_name,
+        .use_password {
+            width: 300px;
+            height: 30px;
+            outline: none;
+            border: 1px solid #ccc;
+        }
+
+        .gtfocus {
+            border-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" class="usr_name" placeholder="请输入您的用户名">
+    <input type="text" class="use_password" placeholder="请输入您的密码">
+
+    <script>
+        var usr_name = document.querySelector('.usr_name');
+        var use_password = document.querySelector('.use_password');
+
+        usr_name.onfocus = function () {
+            this.placeholder = '';
+            this.className = 'usr_name gtfocus';
+        }
+        usr_name.onblur = function () {
+            this.placeholder = '请输入您的用户名';
+            this.className = 'usr_name';
+        }
+
+        use_password.onfocus = function () {
+            this.placeholder = '';
+            this.type = 'password';
+            this.className = 'usr_name gtfocus';
+        }
+        use_password.onblur = function () {
+            this.placeholder = '请输入您的密码';
+            this.className = 'usr_name';
+            if (use_password.value === '') {
+                this.type = 'text';
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

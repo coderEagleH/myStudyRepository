@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            line-height: 200px;
+            font-size: 25px;
+            text-align: center;
+            margin: 200px auto;
+        }
+
+        div i {
+            font-style: normal;
+            color: #1296db;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>用户界面</h3>
+    <div class="box">
+        <i></i>，欢迎您！
+    </div>
+    <script>
+        var str = location.search;
+        str = str.substr(1);
+        var usr = str.split('=');
+        document.body.children[1].children[0].innerHTML = usr[1];
+    </script>
+</body>
+
+</html>

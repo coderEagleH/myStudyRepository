@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分时显示</title>
+</head>
+
+<body>
+    <span>123</span>
+    <img src="" alt="">
+
+    <script>
+        var greeting = document.querySelector('span');
+        var pic = document.querySelector('img');
+        var $t = new Date();
+        var hours = $t.getHours();
+        if (hours <= 12) {
+            greeting.innerHTML = '猪八戒说：上午好！';
+            pic.src = '../css/images/zhubajie.jpg';
+        } else if (hours <= 18) {
+            greeting.innerHTML = '孙悟空说：下午好！';
+            pic.src = '../css/images/sunwukong.jpg';
+        } else {
+            greeting.innerHTML = '盘古说：晚上好！';
+            pic.src = '../css/images/pangu.jpg';
+        }
+    </script>
+</body>
+
+</html>

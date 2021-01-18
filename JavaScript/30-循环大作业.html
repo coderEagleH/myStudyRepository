@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.求1 - 100之间所有数的总和与平均值
+        var sum = 0, average = 0;
+        for (var i = 1; i <= 100; i++) {
+            sum += i;
+        }
+        average = sum / 100;
+        console.log('总和为:' + sum, '平均值为:' + average);
+
+        // 2.求1 - 100之间所有偶数的和
+        var sum_2 = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                sum_2 += i;
+            }
+        }
+        console.log('偶数和为：' + sum_2);
+
+        // 3.求100以内的7的倍数的总和
+        var sum_3 = 0;
+        for (var i = 0; i <= 100; i++) {
+            if (i % 7 == 0) {
+                sum_3 += i;
+            }
+        }
+        console.log('7的倍数的和为：' + sum_3);
+
+        // 4.使用for循环打印五角星矩形，要求每次只能输出一个☆
+        var str = '';
+        var count_y = prompt('请输入要打印的行数：'), count_x = prompt('请输入每行要打印的个数：');
+        for (var i = 1; i <= count_y; i++) {
+            for (var j = 1; j <= count_x; j++) {
+                str += '☆';
+            }
+            str += '\n';
+        }
+        console.log(str);
+
+        // 5.使用for循环打印三角形的☆
+        var str_2 = '', count = prompt('请输入要打印三角的高：');
+        for (var i = 1; i <= count; i++) {
+            for (var j = 1; j <= i; j++) {
+                str_2 += '☆';
+            }
+            str_2 += '\n';
+        }
+        console.log(str_2);
+
+        // 6.用for循环完成99乘法表
+        var $99 = '';
+        for (var i = 1; i <= 9; i++) {
+            for (var j = 1; j <= i; j++) {
+                $99 += j + 'x' + i + '=' + i * j + ' ';
+            }
+            $99 += '\n'
+        }
+        console.log($99);
+
+        // 7.接受用户输入的用户名和密码，若用户名为'admin',密码为'123456'，则提示登陆成功，否则让用户一直输入
+        do {
+            var user_name = prompt('请输入您的用户名：'),
+                user_password = prompt('请输入您的密码：');
+        } while (user_name !== 'admin' && user_password !== '123456')
+        alert('登陆成功！')
+
+        // 8.求整数1-100的累加值，但要跳过所有带3或者能被3整除的数【用continue】
+        var sum_4 = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 == 0 || i % 10 == 3) {
+                console.log(i);
+                continue;
+            }
+            sum_4 += i;
+
+        }
+        console.log(sum_4);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

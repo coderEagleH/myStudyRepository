@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝循环精灵图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        ul {
+            width: 200px;
+            height: 150px;
+            margin: 100px auto;
+        }
+
+        ul a {
+            position: relative;
+            float: left;
+            /* padding: 5px 10px 10px; */
+            width: 50px;
+            height: 50px;
+            border: 1px solid #ccc;
+        }
+
+        ul a li {
+            position: absolute;
+            left: 13px;
+            top: 5px;
+            width: 24px;
+            height: 24px;
+            background: url(images/taobao-sprites.png) no-repeat 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <a href="#">
+            <li></li>
+        </a>
+        <a href="#">
+            <li></li>
+        </a>
+        <a href="#">
+            <li></li>
+        </a>
+        <a href="#">
+            <li></li>
+        </a>
+        <a href="#">
+            <li></li>
+        </a>
+        <a href="#">
+            <li></li>
+        </a>
+        <a href="#">
+            <li></li>
+        </a>
+        <a href="#">
+            <li></li>
+        </a>
+        <a href="#">
+            <li></li>
+        </a>
+        <a href="#">
+            <li></li>
+        </a>
+        <a href="#">
+            <li></li>
+        </a>
+        <a href="#">
+            <li></li>
+        </a>
+    </ul>
+
+    <script>
+        var lis = document.querySelectorAll('li');
+        for (var i = 0; i < lis.length; i++) {
+            var y_p = i * 44;
+            lis[i].style.backgroundPosition = '0 -' + y_p + 'px';
+        }
+    </script>
+</body>
+
+</html>

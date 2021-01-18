@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .nav {
+            width: 500px;
+            height: 200px;
+            margin: 100px auto;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .nav>li {
+            float: left;
+            /* border: 1px solid #000; */
+            text-align: center;
+        }
+
+        .nav li div {
+            padding: 10px 20px;
+            /* border: 1px solid #ccc; */
+            background-color: #f9f9f9;
+        }
+
+        .nav>li ul {
+            display: none;
+        }
+
+        .nav li ul li {
+            padding: 5px 20px;
+            background-color: rgb(255, 250, 240);
+            border: 1px solid #ccc;
+            border-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>
+            <div>微博微博</div>
+            <ul>
+                <li>关注</li>
+                <li>粉丝</li>
+                <li>@我</li>
+            </ul>
+        </li>
+        <li>
+            <div>微博</div>
+            <ul>
+                <li>关注</li>
+                <li>粉丝</li>
+                <li>@我</li>
+            </ul>
+        </li>
+        <li>
+            <div>微博</div>
+            <ul>
+                <li>关注</li>
+                <li>粉丝</li>
+                <li>@我</li>
+            </ul>
+        </li>
+        <li>
+            <div>微博</div>
+            <ul>
+                <li>关注</li>
+                <li>粉丝</li>
+                <li>@我</li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        $(function () {
+            $(".nav>li").mouseover(function () {
+                $(this).children("ul").show();
+            })
+            $(".nav>li").mouseout(function () {
+                $(this).children("ul").hide();
+            })
+        })
+    </script>
+</body>
+
+</html>

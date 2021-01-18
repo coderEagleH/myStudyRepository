@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素显示模式的转换基本使用</title>
+    <style>
+        a {
+            width: 150px;
+            height: 50px;
+            background-color: blue;
+            /* 把行内元素a转换为块级元素 */
+            display: block;
+        }
+
+        div {
+            width: 300px;
+            height: 100px;
+            background-color: purple;
+            /* 把块级元素div转换为行内元素 */
+            display: inline;
+        }
+
+        span {
+            width: 150px;
+            height: 100px;
+            background-color: green;
+            /* 把行内元素span转换为行内块元素 */
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">咸蛋超人</a>
+    <a href="#">美国队长</a>
+    <a href="#">超级士兵</a>
+    <div>我是块级元素</div>
+    <div>我是块级元素</div>
+    <span>行内元素转换为行内块元素</span>
+    <span>行内元素转换为行内块元素</span>
+    <span>行内元素转换为行内块元素</span>
+</body>
+
+</html>

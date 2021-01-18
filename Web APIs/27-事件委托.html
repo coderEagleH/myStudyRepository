@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>知否知否，点我应有弹框在手！</li>
+        <li>知否知否，点我应有弹框在手！</li>
+        <li>知否知否，点我应有弹框在手！</li>
+        <li>知否知否，点我应有弹框在手！</li>
+        <li>知否知否，点我应有弹框在手！</li>
+        <li>知否知否，点我应有弹框在手！</li>
+        <li>知否知否，点我应有弹框在手！</li>
+        <li>知否知否，点我应有弹框在手！</li>
+        <li>知否知否，点我应有弹框在手！</li>
+    </ul>
+
+    <script>
+        var ul = document.querySelector('ul');
+        ul.addEventListener('click', fn);
+        ul.addEventListener('selectstart', function (e) {
+            e.preventDefault();
+        })
+
+        function fn(e) {
+            if (e.target != ul) {
+                for (var i = 0; i < ul.children.length; i++) {
+                    ul.children[i].style.backgroundColor = '';
+                }
+                e.target.style.backgroundColor = 'yellowgreen';
+            }
+        }
+    </script>
+</body>
+
+</html>

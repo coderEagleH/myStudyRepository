@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片底侧有空白缝隙解决方案</title>
+    <style>
+        div {
+            border: 2px solid red;
+        }
+
+        img {
+            vertical-align: bottom;
+        }
+
+        .box {
+            width: 100px;
+            height: 42px;
+            border: 1px solid #000;
+            vertical-align: bottom;
+
+            /* 单行文字显示，溢出部分用省略号代替 */
+            /* 强制单行显示文字 */
+            /* white-space: nowrap; */
+            /* 溢出部分隐藏 */
+            /* overflow: hidden; */
+            /* 溢出部分用省略号代替 */
+            /* text-overflow: ellipsis; */
+
+            /* 多行文字显示，溢出部分用省略号代替 */
+            /* 仅支持webkit的浏览器和移动端 */
+            /* 溢出部分隐藏 */
+            overflow: hidden;
+            /* 溢出部分用省略号代替 */
+            text-overflow: ellipsis;
+            /* 弹性伸缩盒子模型显示 */
+            display: -webkit-box;
+            /* 限制一个块元素显示文本的行数 */
+            -webkit-line-clamp: 2;
+            /* 设置或检索伸缩盒子的子元素排列方式 */
+            -webkit-box-orient: vertical;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div><img src="images/mov.png" alt=""></div>
+
+    <div class="box">
+        文字太多了，这个地方可能药省罗很多多多多赌斗斗斗多读都行字
+    </div>
+</body>
+
+</html>

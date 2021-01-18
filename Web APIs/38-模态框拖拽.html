@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fff;
+        }
+
+        h3 {
+            padding: 20px 0;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        h2 {
+            margin: 20px 0;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .box {
+            display: none;
+            position: absolute;
+            left: 550px;
+            top: 180px;
+            width: 600px;
+            height: 350px;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.9);
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .box span {
+            position: absolute;
+            right: -20px;
+            top: -20px;
+            width: 40px;
+            height: 40px;
+            font-size: 12px;
+            text-align: center;
+            line-height: 40px;
+            background-color: #fff;
+            border-radius: 20px;
+        }
+
+        i {
+            display: inline-block;
+            width: 100px;
+            /* background-color: #fff; */
+            font-style: normal;
+            font-size: 20px;
+            text-align: right;
+        }
+
+        input {
+            outline: none;
+            width: 400px;
+            height: 35px;
+            font-size: 16px;
+        }
+
+        .box div {
+            margin-top: 50px;
+        }
+
+        .box button {
+            /* display: inline-block; */
+            height: 35px;
+            width: 250px;
+            margin-top: 40px;
+            background-color: #fff;
+            outline: none;
+            border: 1px solid #666;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>点击，弹出登录框</h2>
+    <div class="box">
+        <h3>会员登陆</h3>
+        <span>关闭</span>
+        <div><i>用户名：</i><input type="text" name="users_name" id="" placeholder="请输入用户名"></div>
+        <div><i>登陆密码：</i><input type="password" name="users_password" id="" placeholder="请输入登陆密码"></div>
+        <button type="submit">登录会员</button>
+    </div>
+
+    <script>
+        var body = document.body;
+        var title = body.children[1].children[0];
+        body.children[0].addEventListener('mouseover', cursor_pointer);
+        body.children[0].addEventListener('click', function () {
+            body.style.backgroundColor = '#999';
+            body.children[1].style.display = 'block';
+        })
+        body.children[1].children[4].addEventListener('mouseover', cursor_pointer);
+        body.children[1].children[1].addEventListener('mouseover', cursor_pointer);
+        body.children[1].children[1].addEventListener('click', function () {
+            body.style.backgroundColor = '#fff';
+            body.children[1].style.display = 'none';
+        })
+        function cursor_pointer() {
+            this.style.cursor = 'pointer';
+        }
+        title.addEventListener('mouseover', function () {
+            this.style.cursor = 'move';
+        })
+
+        title.addEventListener('mousedown', function (e) {
+            var x = e.pageX - this.parentNode.offsetLeft;
+            var y = e.pageY - this.parentNode.offsetTop;
+            document.addEventListener('mousemove', move);
+            function move(e) {
+                title.parentNode.style.left = e.pageX - x + 'px';
+                title.parentNode.style.top = e.pageY - y + 'px';
+            }
+            document.addEventListener('mouseup', function () {
+                document.removeEventListener('mousemove', move);
+            })
+
+        })
+
+
+    </script>
+</body>
+
+</html>

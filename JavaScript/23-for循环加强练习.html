@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for循环</title>
+    <script>
+        // 1.求1 - 100之间所有数的平均值
+        var average = 0, sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            sum += i;
+        }
+        average = sum / 100;
+        console.log(average);
+
+        // 2.求1-100之间的所有偶数的和和奇数的和
+        var jishu_sum = 0, oushu_sum = 0;
+        for (var i = 1; i <= 100; i += 2) {
+            jishu_sum += i;
+        }
+        for (var j = 2; j <= 100; j += 2) {
+            oushu_sum += j;
+        }
+        console.log(jishu_sum, oushu_sum);
+        // 3.求1-100之剑所有能被3整除的数字的和
+        var $sum = 0;
+        for (var i = 3; i <= 100; i += 3) {
+            $sum += i;
+            console.log(i);
+        }
+        console.log($sum);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

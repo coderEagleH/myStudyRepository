@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态生成表格</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        table {
+            width: 500px;
+            margin: 100px auto;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        th {
+            height: 35px;
+            background-color: #ccc;
+            border: 1px solid #000;
+        }
+
+        td {
+            border: 1px solid #000;
+            border-top: 0;
+        }
+
+        td a {
+            text-decoration: none;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>科目</th>
+                <th>成绩</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        var datas = [{
+            name: 'Luffy',
+            subject: 'JavaScript',
+            score: 92
+        }, {
+            name: 'Sabo',
+            subject: 'JavaScript',
+            score: 100
+        }, {
+            name: 'Ace',
+            subject: 'JavaScript',
+            score: 97
+        }, {
+            name: 'Zoro',
+            subject: 'JavaScript',
+            score: 90
+        }, {
+            name: 'Bucky',
+            subject: 'JavaScript',
+            score: 65
+        }]
+        // 往tbody里创建行:有几个人（数组长度）创建几行
+        var tbody = document.querySelector('tbody');
+        for (var i = 0; i < datas.length; i++) {
+            var tr = document.createElement('tr');
+            tbody.appendChild(tr);
+            for (var k in datas[i]) {
+                var td = document.createElement('td');
+                td.innerHTML = datas[i][k];
+                tr.appendChild(td);
+            }
+            var td = document.createElement('td');
+            td.innerHTML = '<a href="#">删除</a>';
+            tr.appendChild(td);
+        }
+
+        var as = document.querySelectorAll('a');
+        for (var i = 0; i < as.length; i++) {
+            as[i].onclick = function () {
+                tbody.removeChild(this.parentNode.parentNode);
+            }
+        }
+    </script>
+</body>
+
+</html>

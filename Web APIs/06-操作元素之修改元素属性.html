@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="pangu">盘古</button>
+    <button id="sunwukong">孙悟空</button>
+    <img src="" alt="">
+
+    <script>
+        var pangu = document.getElementById('pangu');
+        var sunwukong = document.getElementById('sunwukong');
+        var images = document.getElementsByTagName('img');
+        pangu.onclick = function () {
+            images[0].src = "../css/images/pangu.jpg";
+            images[0].title = '盘古';
+        }
+        sunwukong.onclick = function () {
+            images[0].src = "../css/images/sunwukong.jpg";
+            images[0].title = '孙悟空';
+        }
+    </script>
+
+</body>
+
+</html>

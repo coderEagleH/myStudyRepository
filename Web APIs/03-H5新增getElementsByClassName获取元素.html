@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">盒子1</div>
+    <div class="box">盒子2</div>
+
+    <div id="nav">
+        <ul>
+            <li>首页</li>
+            <li>产品</li>
+        </ul>
+    </div>
+
+    <script>
+        // 1.getElementsByClassName() 根据元素类名获取元素集合
+        var boxs = document.getElementsByClassName('box');
+        console.log(boxs);
+
+        // 2.querySelector() 根据指定选择器选择第一个对应选择器的元素
+
+        var firstBox = document.querySelector('#nav li');
+        console.log(firstBox);
+    </script>
+</body>
+
+</html>

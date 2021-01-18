@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>嵌套块元素</title>
+    <style>
+        /* .father {
+            width: 400px;
+            height: 400px;
+            background-color: purple;
+            margin-top: 50px;
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            margin-top: 100px;
+        }
+        此时会产生塌陷，父元素与子元素一起产生了100px的上边距 */
+
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: purple;
+            margin-top: 50px;
+            /* 解决方法1 为父元素定义上边框 */
+            /* border: 1px solid black; */
+            /* 嫌弃边框有颜色不好看，可以将边框改为透明的 transparent */
+            /* border: 1px solid transparent; */
+
+            /* 解决方法2 为父元素定义内边距 */
+            /* padding: 1px; */
+
+            /* 解决方法3 为父元素添加 overflow: hidden; */
+            /* 这种方式比较常用，不会增加盒子的大小 */
+            overflow: hidden;
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son">
+
+        </div>
+    </div>
+</body>
+
+</html>

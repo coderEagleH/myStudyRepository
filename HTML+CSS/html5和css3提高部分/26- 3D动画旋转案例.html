@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 500px;
+
+        }
+
+        .box {
+            position: relative;
+            width: 100px;
+            height: 200px;
+            margin: 100px auto;
+            transition: all 1s linear;
+            transform-style: preserve-3d;
+        }
+
+        .box:hover {
+            transform: rotateY(60deg);
+        }
+
+        .son1,
+        .son2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 200px;
+        }
+
+        .son1 {
+
+            background-color: green;
+        }
+
+        .son2 {
+            background-color: blue;
+            transform: rotateX(60deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="son1"></div>
+        <div class="son2"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除内外边距</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        span {
+            /* 为了照顾兼容性，行内元素尽量只设置左右内外边距 若转换为块元素或者行内块元素则上下左右都可以设置 */
+            padding: 0 20px;
+            background-color: #1289db;
+        }
+    </style>
+</head>
+
+<body>
+    <div>123</div>
+    <ul>
+        <li>abcd</li>
+    </ul>
+    <span>999</span>
+</body>
+
+</html>

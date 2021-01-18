@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝轮播图案例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box {
+            position: relative;
+            margin: 200px auto;
+            height: 340px;
+            width: 820px;
+
+        }
+
+        .box>img {
+            height: 340px;
+            width: 820px;
+        }
+
+        .box div img {
+            width: 100%;
+        }
+
+        .left,
+        .right {
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            height: 30px;
+            width: 20px;
+            background-color: rgba(0, 0, 0, .4);
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .left {
+            border-radius: 0 15px 15px 0;
+            left: 0;
+        }
+
+        .right {
+            border-radius: 15px 0 0 15px;
+            right: 0;
+        }
+
+        .point {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            margin-left: -35px;
+            height: 13px;
+            width: 70px;
+            background-color: rgba(255, 255, 255, .3);
+            border-radius: 7px;
+
+        }
+
+        .point ul li {
+            float: left;
+            margin: 3px;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+
+        .point ul .selected {
+            background-color: #ff5000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="images/lolbg.png">
+        <div class="left"><a href="#">&lt;</a></div>
+        <div class="right"><a href="#">&gt;</a></div>
+        <div class="point">
+            <ul>
+                <li class="selected"><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

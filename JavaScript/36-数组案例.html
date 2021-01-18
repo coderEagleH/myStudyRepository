@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.删除指定数组元素：将数组中的0全部删除，形成一个不包含0的新数组
+        var arr_1 = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7], arr_2 = [];
+        for (var i = 0; i < arr_1.length; i++) {
+            if (arr_1[i] != 0) {
+                arr_2[arr_2.length] = arr_1[i];
+            }
+        }
+        console.log(arr_2); //打印结果
+
+        // 2.翻转数组：将数组的内容反过来存放
+        var arr_3 = ['red', 'green', 'blue', 'pink', 'purple'], arr_4 = [];
+        for (var i = arr_3.length - 1; i >= 0; i--) {
+            arr_4[arr_4.length] = arr_3[i];
+        }
+        console.log(arr_4);
+
+        // 3.冒泡排序
+        var arr_5 = [1, 8, 4, 6, 9, 5, 3, 7], temp;
+        for (var i = 0; i < arr_5.length; i++) {
+            for (var j = 0; j < arr_5.length - i; j++) {
+                if (arr_5[j] > arr_5[j + 1]) {
+                    temp = arr_5[j];
+                    arr_5[j] = arr_5[j + 1];
+                    arr_5[j + 1] = temp;
+                }
+            }
+        }
+        console.log(arr_5);
+
+        // 4.选择排序
+        var arr = [1, 8, 4, 7, 9, 3, 5, 2], max;
+        for (var i = 0; i < arr.length - 1; i++) {
+            for (var j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    max = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = max;
+                }
+            }
+        }
+        console.log(arr);
+    </script>
+
+</body>
+
+</html>

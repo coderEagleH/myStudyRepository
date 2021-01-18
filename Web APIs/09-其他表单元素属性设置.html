@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div img {
+            width: 16px;
+            height: 16px;
+            vertical-align: middle;
+        }
+
+        input {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input class="users_name" type="text" value="" placeholder="请输入您的用户名">
+    <div><input class="users_password" type="text" value="" placeholder="请输入您的密码">
+        <img src="../CSS/images/zuo.png" alt=""> | <a href="#">忘记密码</a>
+    </div>
+
+    <script>
+        var usr_name = document.querySelector('.users_name');
+        var usr_password = document.querySelector('.users_password');
+        var eyes = document.querySelector('img');
+        var flag = 1;
+        usr_password.onfocus = function () {
+            this.type = 'password';
+        }
+        eyes.onclick = function () {
+            if (flag) {
+                usr_password.type = 'text';
+                this.src = '../CSS/images/you.png';
+                flag = 0;
+            } else {
+                usr_password.type = 'password';
+                this.src = '../CSS/images/zuo.png';
+                flag = 1;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业</title>
+</head>
+
+<body>
+    <script>
+        // 给定一个字符串，如："abaasdffggghhjjkkgfddssssss3444343"，完成以下问题：
+        var str = 'abaasdffggghhjjkkgfddssssss3444343';
+
+        // 1.字符串长度
+        var $length = str.length;
+        console.log('字符串长度为：' + $length);
+
+        // 2.取出指定位置的字符，如：0，3，5，9等
+        var index_0 = str.charAt(0),
+            index_3 = str.charAt(3),
+            index_5 = str.charAt(5),
+            index_9 = str.charAt(9);
+        console.log('第0个为：' + index_0 + '\n第3个为：' + index_3 + '\n第5个为：' + index_5 + '\n第9个为：' + index_9);
+
+        // 3.查找指定字符是否在以上字符串中存在，如：i，c，b等
+        function charPos(chars) {
+            if (str.indexOf(chars) !== -1) {
+                console.log('str字符串中存在' + chars);
+            } else {
+                console.log('str字符串中不存在' + chars);
+            }
+        }
+        charPos('i');
+        charPos('c');
+        charPos('b');
+
+        // 4.替换指定的字符，如：g替换为22，ss替换为b等
+        function replaceAll(arr, pre, now) {
+            while (arr.indexOf(pre) !== -1) {
+                arr = arr.replace(pre, now);
+            }
+            return arr;
+        }
+        var newArr1 = replaceAll(str, 'g', '22');
+        var newArr2 = replaceAll(str, 'ss', 'b');
+        console.log(str);
+        console.log(newArr1);
+        console.log(newArr2);
+
+        // 5.截取指定开始位置到结束位置的字符串，如：取得1-5的字符串
+        var newArr3 = str.slice(0, 5);
+        console.log(newArr3);
+
+        // 6.找出以上字符串中出现次数最多的字符和出现的次数
+        var obj = {};
+        for (var i = 0; i < str.length; i++) {
+            var chars = str[i];
+            if (obj[chars]) {
+                obj[chars]++;
+            } else {
+                obj[chars] = 1;
+            }
+        }
+        var max = 0, ch;
+        for (var k in obj) {
+            if (obj[k] > max) {
+                max = obj[k];
+                ch = k;
+            }
+        }
+        console.log('出现次数最多的是：' + ch + '\n一共出现了' + max + '次');
+    </script>
+
+</body>
+
+</html>

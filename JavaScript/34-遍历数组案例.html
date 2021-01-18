@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.求数组arr的和和平均值
+        var arr = [2, 6, 1, 7, 4],
+            sum = 0, average = 0;
+        for (var i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        average = sum / arr.length;
+        console.log('和为:' + sum, '平均值为：' + average);
+
+        // 2.求数组arr_1中的最大值
+        var arr_1 = [2, 6, 1, 77, 52, 25, 7],
+            max = arr_1[0];
+        for (var i = 1; i < arr_1.length; i++) {
+            if (max < arr_1[i]) {
+                max = arr_1[i];
+            }
+        }
+        console.log(max);
+
+        // 3.将arr_2内容分割转为字符串，并用丨分割
+        var arr_2 = ['red', 'green', 'blue', 'pink'],
+            str = arr_2[0];
+        for (var i = 1; i < arr_2.length; i++) {
+            str += '|' + arr_2[i];
+        }
+        console.log(str);
+
+        // 4.在arr_3里存放1-100这100个整数
+        var arr_3 = [];
+        for (var i = 1; i <= 100; i++) {
+            arr_3[i - 1] = i;
+        }
+        console.log(arr_3);
+    </script>
+</body>
+
+</html>

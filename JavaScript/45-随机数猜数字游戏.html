@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜数字游戏</title>
+</head>
+
+<body>
+    <script>
+        function getRondom(min, max) {
+            min = Math.floor(min);
+            max = Math.ceil(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        var $times = 10,
+            ans = getRondom(1, 50),
+            usr_guess = prompt('请输入您要猜的数字（1~50），注意！您只有十次机会哟：');
+        while (--$times > 0) {
+            if (usr_guess > ans) {
+                usr_guess = prompt('猜大啦，再猜一次，您还有' + $times + '次机会哦~');
+                continue;
+            } else if (usr_guess < ans) {
+                usr_guess = prompt('猜小啦，再猜一次，您还有' + $times + '次机会哦~');
+                continue;
+            } else {
+                alert('哇，这都能猜对，献上我的膝盖！\n您一共用了' + (10 - $times) + '次机会！');
+                break;
+            }
+        }
+        alert('太可惜了，您已经没有机会了，真是个大笨蛋！');
+
+
+
+
+
+
+
+
+        // var ans = getRondom(1, 10),
+        //     usr_gs = Number(prompt('请输入您猜的数字（1~10）：'));
+        // while (usr_gs != ans) {
+        //     if (usr_gs > ans) {
+        //         usr_gs = prompt('数字猜大了，继续猜：');
+        //         continue;
+        //     }
+        //     usr_gs = prompt('数字猜小了，继续猜：');
+        // }
+        // alert('恭喜你猜对啦！');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+header {
+    height: 84px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #b1191a;
+}
+.logo {
+    padding-top: 18px;
+}
+.registerarea {
+    height: 522px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+.registerarea h3 {
+    height: 42px;
+    padding: 0 10px;
+    background-color: #ececec;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+    font-weight: 400;
+    color: #333333;
+    line-height: 42px;
+}
+.login {
+    float: right;
+    font-size: 14px;
+    color: #333;
+}
+/* 注册内容部分 */
+.reg-form {
+    width: 600px;
+    margin: 50px auto 0;
+}
+.reg-form ul li {
+    margin-bottom: 20px;
+}
+.reg-form ul li label {
+    display: inline-block;
+    width: 88px;
+    text-align: right;
+}
+.reg-form ul li .inp {
+    width: 242px;
+    height: 37px;
+    border: 1px solid #ccc;
+}
+.success_icon,
+.error_icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+.reg-form ul li .error {
+    color: #df3033;
+}
+.error_icon {
+    background: url(../images/error_icon.png) no-repeat;
+}
+.reg-form ul li .success {
+    color: #40b83f;
+}
+.success_icon {
+    background: url(../images/success_icon.png) no-repeat;
+}
+.safe {
+    margin-left: 161px;
+}
+.safe em {
+    padding: 0 11px;
+    margin: 1px;
+    color: #fff;
+}
+.ruo {
+    background-color: #de1111;
+}
+.zhong {
+    background-color: #f79100;
+}
+.qiang {
+    background-color: #40b83f;
+}
+.agree {
+    vertical-align: middle;
+    padding-left: 85px;
+}
+.agree a {
+    color: #1ba1e6;
+}
+.reg-form ul li input[type="submit"] {
+    width: 200px;
+    height: 34px;
+    margin-left: 95px;
+    background-color: #c81623;
+    border-width: 0px;
+    font-size: 14px;
+    color: #fff;
+}
+.footer {
+    height: 0;
+    background-color: #fff;
+}
