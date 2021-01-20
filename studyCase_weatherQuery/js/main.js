@@ -23,7 +23,6 @@ var app = new Vue({
                     that.topCity = that.city;
                 },
                 function (err) {
-                    that.topCity = "仅支持按城市搜索，请重新输入"
 
                 })
         },
