@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+#skyKnow {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nav {
+    width: 600px;
+    margin: 50px auto 0;
+}
+
+.logo {
+    margin-top: 100px;
+    font-size: 50px;
+    color: #1296db;
+}
+
+input {
+    width: 500px;
+    height: 36px;
+    outline: none;
+    border: 1px solid #1296db;
+    border-right: 0 solid #000;
+    padding-left: 10px;
+    line-height: 36px;
+    font-size: 14px;
+}
+
+button {
+    height: 36px;
+    width: 100px;
+    line-height: 36px;
+    background-color: #1296db;
+    outline: none;
+    border: 0;
+    color: #fff;
+    vertical-align: middle;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.clcNav {
+    height: 20px;
+    margin-left: 100px;
+    margin-top: 5px;
+}
+
+.clcNav li {
+    padding: 0 5px;
+    float: left;
+    font-size: 12px;
+}
+
+.clcNav li a {
+    color: #666;
+    text-decoration: none;
+}
+
+.weather {
+    margin-top: 30px;
+    height: 200px;
+    /* background-color: #1296db; */
+}
+
+.weather li {
+    float: left;
+    width: 160px;
+    height: 100%;
+    /* border-right: 1px solid #000; */
+}
+
+.type {
+    font-size: 40px;
+    color: #1296db;
+    margin-bottom: 10px;
+}
+
+.tem {
+    font-size: 24px;
+    color: #1296db;
+    margin-bottom: 10px;
+}
+
+.date,
+.wind-p,
+.wind {
+    font-size: 16px;
+    color: #666;
+    margin: 10px;
+}
+.cityName {
+    height: 40px;
+    margin-top: 30px;
+    font-size: 40px;
+    font-weight: 700;
+    color: #1296db;
+}
