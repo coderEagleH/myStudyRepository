@@ -6,6 +6,8 @@
 
 - 为什么学习Vuejs
 - Vue的读音
+  Vue (读音 /vjuː/，类似于 **view**)
+
 - Vue的渐进式
 - Vue的特点
 
