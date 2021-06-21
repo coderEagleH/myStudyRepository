@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "es2015", // 模块系统采用es6的规范
+    "target": "es2015", // ts代码编译为es6代码
+    "strict": true, // 开启严格模式
+    "outDir": "./dist" // 编译后的js代码会放在dist文件夹下
+  },
+  "include": ["./src/**/*"]
+  // 使用 tsc -w 命令开启保存后自动编译
+}
